@@ -17,25 +17,19 @@ export default function GoogleOAuth({...props }) {
     const FailureLoginHandler = (err) => {
         console.log(err);
     };
-    return ( <
-        div {...props } >
-        <
-        GoogleLogin clientId = '267899373932-5r9asu4k1djlejr1881eairhims29er7.apps.googleusercontent.com'
+    return ( <div {...props }>
+        <GoogleLogin clientId = '267899373932-5r9asu4k1djlejr1881eairhims29er7.apps.googleusercontent.com'
         buttonText = 'Sign In Using Google'
         render = {
             (renderProps) => {
-                return ( <
-                    Button onClick = { renderProps.onClick }
+                return ( <Button onClick = { renderProps.onClick }
                     btnType = 'primary' {...props } >
-                    Sign In Using Google <
-                    /Button>
+                    Sign In Using Google </Button>
                 );
             }
         }
         onSuccess = { SuccessLoginHandler }
         onFailure = { FailureLoginHandler }
-        cookiePolicy = { 'single_host_origin' }
-        /> < /
-        div >
+        cookiePolicy = { 'single_host_origin' }/> </div>
     );
 }
