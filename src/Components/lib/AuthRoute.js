@@ -11,7 +11,7 @@ export default function AuthRoute({ component: Component, ...rest }) {
     <Route
       {...rest}
       render={(props) => {
-        return authenicated ? <Component {...props} /> : <Redirect to='/' />;
+        return authenicated ? <Component {...props}/> : <Redirect to='/'/>;
       }}
     />
   );

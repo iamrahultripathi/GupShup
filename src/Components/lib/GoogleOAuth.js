@@ -18,6 +18,8 @@ export default function GoogleOAuth({...props }) {
         console.log(err);
     };
     return ( <div {...props }>
+        {/* <GoogleLogin clientId = '794300093186-evtkr9vjk60bd8vmt7jm617fdpess4oa.apps.googleusercontent.com' */}
+        {/* <GoogleLogin clientId = '17859477427-dejs6iqogl23lfhhv4s6ra75v2o8e9sn.apps.googleusercontent.com' */}
         <GoogleLogin clientId = '267899373932-5r9asu4k1djlejr1881eairhims29er7.apps.googleusercontent.com'
         buttonText = 'Sign In Using Google'
         render = {
