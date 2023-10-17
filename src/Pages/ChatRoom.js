@@ -18,7 +18,8 @@ export default function ChatRoom() {
     const [socket, setSocket] = useState();
 
     useEffect(() => {
-        const Endpoint = 'http://localhost:4000';
+        const Endpoint = 'https://gupshupserver.netlify.app/';
+        // const Endpoint = 'http://localhost:4000';
         // const Endpoint = 'https://chatting-chatzzz.herokuapp.com';
         const socketTEMP = socketio(Endpoint, {
             withCredentials: true,
