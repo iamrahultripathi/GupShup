@@ -1,10 +1,21 @@
 import GoogleLogin from 'react-google-login';
 import Button from '../ui/Button';
 import { Context } from '../../Contexts/userContext';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { useHistory } from 'react-router';
+import { gapi } from "gapi-script";
 
 export default function GoogleOAuth({...props }) {
+    useEffect(() => {
+        function start() {
+          gapi.client.init({
+            clientId: '794300093186-evtkr9vjk60bd8vmt7jm617fdpess4oa.apps.googleusercontent.com',
+            scope: 'email',
+          });
+        }
+    
+        gapi.load('client:auth2', start);
+      }, []);
     const user = useContext(Context);
     const history = useHistory();
     const SuccessLoginHandler = (res) => {
