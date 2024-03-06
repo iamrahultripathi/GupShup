@@ -18,9 +18,9 @@ export default function ChatRoom() {
     const [socket, setSocket] = useState();
 
     useEffect(() => {
-        const Endpoint = 'https://gupshup-b13da9f9245f.herokuapp.com';
+        // const Endpoint = 'https://gupshup-b13da9f9245f.herokuapp.com';
         // const Endpoint = 'http://localhost:4000';
-        // const Endpoint = 'https://chatting-chatzzz.herokuapp.com';
+        const Endpoint = 'http://13.127.223.83:4000/';
         const socketTEMP = socketio(Endpoint, {
             withCredentials: true,
         });
