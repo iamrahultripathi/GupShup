@@ -20,7 +20,7 @@ export default function ChatRoom() {
     useEffect(() => {
         // const Endpoint = 'https://gupshup-b13da9f9245f.herokuapp.com';
         // const Endpoint = 'http://localhost:4000';
-        const Endpoint = 'http://13.127.223.83:4000/';
+        const Endpoint = 'https://chatzzzserver.xyz/';
         const socketTEMP = socketio(Endpoint, {
             withCredentials: true,
         });
